@@ -1,4 +1,7 @@
-<button (click)="toggleShowBooks()">Show books</button>
+<button (click)="showBooks = !showBooks">
+  <span *ngIf="showBooks">Hide books</span>
+  <span *ngIf="!showBooks">Show books</span>
+</button>
 <input type="text" [(ngModel)]="inputText">
 <p> {{ inputText }}</p>
 <h2>Melhores livros: <h2>

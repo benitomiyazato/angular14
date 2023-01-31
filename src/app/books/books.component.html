@@ -1,10 +1,12 @@
 <button (click)="showBooks = !showBooks">
-  <ng-container>*ngIf="showBooks">Hide books</ng-container>
+  <ng-container *ngIf="showBooks">Hide books</ng-container>
   <ng-container *ngIf="!showBooks">Show books</ng-container>
 </button>
-<input type="text" [(ngModel)]="inputText">
-<p> {{ inputText }}</p>
-<h2>Melhores livros: <h2>
-  <ul *ngIf="showBooks">
-    <li>{{ name }} de {{ author }}</li>
-  </ul>
+<input type="text" [(ngModel)]="inputText" />
+<p>{{ inputText }}</p>
+<h2>Melhores livros:</h2>
+<ul *ngIf="showBooks">
+  <ng-container *ngFor="let book of books">
+    <li>{{ book.title }} de {{ book.authorName }}</li>
+  </ng-container>
+</ul>

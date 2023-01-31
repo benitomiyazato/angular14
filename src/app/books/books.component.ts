@@ -13,12 +13,12 @@ interface BookInterface {
 export class BooksComponent {
   books : BookInterface[] = [
     {
-      title: "Terra Sonâbula",
-      authorName: "Mia Couto",
+      title: "terra sonâbula",
+      authorName: "mia couto",
     },
     {
-      title: "Vidas Secas",
-      authorName: "Graciliano Ramos"
+      title: "vidas secas",
+      authorName: "graciliano ramos"
     }
   ]
 

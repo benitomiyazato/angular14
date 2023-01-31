@@ -7,6 +7,6 @@
 <h2>Melhores livros:</h2>
 <ul *ngIf="showBooks">
   <ng-container *ngFor="let book of books">
-    <li>{{ book.title }} de {{ book.authorName }}</li>
+    <li>{{ book.title | titlecase}} de {{ book.authorName | titlecase}}</li>
   </ng-container>
 </ul>

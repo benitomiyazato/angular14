@@ -10,4 +10,7 @@ export class BooksComponent {
   author: string = "Mia Couto";
   isDisabled: boolean = false;
 
+  handleClick = () => {
+    this.isDisabled = true;
+  }
 }

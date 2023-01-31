@@ -1,6 +1,6 @@
 <button (click)="showBooks = !showBooks">
-  <span *ngIf="showBooks">Hide books</span>
-  <span *ngIf="!showBooks">Show books</span>
+  <ng-container>*ngIf="showBooks">Hide books</ng-container>
+  <ng-container *ngIf="!showBooks">Show books</ng-container>
 </button>
 <input type="text" [(ngModel)]="inputText">
 <p> {{ inputText }}</p>

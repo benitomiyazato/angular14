@@ -1,4 +1,6 @@
 <button (click)="handleClick()" [disabled]="isDisabled">Disable button</button>
+<input type="text" [(ngModel)]="inputText">
+<p> {{ inputText }}</p>
 <h2>Melhores livros: <h2>
   <ul>
     <li>{{ name }} de {{ author }}</li>

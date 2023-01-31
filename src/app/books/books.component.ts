@@ -9,6 +9,7 @@ export class BooksComponent {
   name: string = "Terra Sonâbula";
   author: string = "Mia Couto";
   isDisabled: boolean = false;
+  inputText : string | null = null;
 
   handleClick = () => {
     this.isDisabled = true;

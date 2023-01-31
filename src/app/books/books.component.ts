@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
+  name: string = "Terra Sonâbula";
+  author: string = "Mia Couto";
 
 }

@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class BooksComponent {
   name: string = "Terra Sonâbula";
   author: string = "Mia Couto";
-  isDisabled: boolean = false;
+  showBooks: boolean = true;
   inputText : string | null = null;
 
-  handleClick = () => {
-    this.isDisabled = true;
+  toggleShowBooks = () => {
+    this.showBooks = this.showBooks ? false : true;
   }
 }

@@ -1,7 +1,7 @@
-<button (click)="handleClick()" [disabled]="isDisabled">Disable button</button>
+<button (click)="toggleShowBooks()">Show books</button>
 <input type="text" [(ngModel)]="inputText">
 <p> {{ inputText }}</p>
 <h2>Melhores livros: <h2>
-  <ul>
+  <ul *ngIf="showBooks">
     <li>{{ name }} de {{ author }}</li>
   </ul>

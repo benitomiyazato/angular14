@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class BooksComponent {
   name: string = "Terra Sonâbula";
   author: string = "Mia Couto";
+  isDisabled: boolean = false;
 
 }

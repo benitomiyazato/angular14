@@ -23,4 +23,8 @@ export class BooksComponent {
   toggleShowBooks = () => {
     this.showBooks = this.showBooks ? false : true;
   };
+
+  addToCart = (book: BookInterface) => {
+    console.log(book);
+  };
 }

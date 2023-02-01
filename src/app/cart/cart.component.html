@@ -1,6 +1,6 @@
 <ng-container *ngIf="getCart().length > 0">
   <h1>Your cart:</h1>
-  <app-book *ngFor="let book of getCart()" [book] = "book"></app-book>
+  <p *ngFor="let book of getCart()">{{ book.title | titlecase }} de {{ book.authorName | titlecase }}</p>
 </ng-container>
 
 <ng-container *ngIf="getCart().length == 0">

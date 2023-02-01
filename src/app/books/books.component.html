@@ -2,11 +2,14 @@
   <ng-container *ngIf="showBooks">Hide books</ng-container>
   <ng-container *ngIf="!showBooks">Show books</ng-container>
 </button>
-<input type="text" [(ngModel)]="inputText"/>
+<input type="text" [(ngModel)]="inputText" />
 <p>{{ inputText }}</p>
-<h2>Melhores livros:</h2>
-<ul *ngIf="showBooks">
-  <ng-container *ngFor="let book of books">
-    <app-book (bookEmitter)="addToCart($event)" [book]="book"></app-book>
-  </ng-container>
-</ul>
+<ng-container *ngIf="showBooks">
+  <h2>Melhores livros:</h2>
+  <ul>
+    <ng-container *ngFor="let book of books">
+      <app-book [book]="book"></app-book>
+    </ng-container>
+  </ul>
+</ng-container>
+<app-cart></app-cart>

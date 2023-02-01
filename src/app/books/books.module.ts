@@ -1,3 +1,4 @@
+import { CartComponent } from './../cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import { BooksService } from './books.service';
 import { BookComponent } from './../book/book.component';
@@ -8,7 +9,7 @@ import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  declarations: [BooksComponent, BookComponent],
+  declarations: [BooksComponent, BookComponent, CartComponent],
   imports: [CommonModule, FormsModule],
   providers: [BooksService],
   exports: [BooksComponent]

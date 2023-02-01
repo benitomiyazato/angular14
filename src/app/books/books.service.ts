@@ -9,10 +9,12 @@ export class BooksService {
       {
         title: 'terra sonâbula',
         authorName: 'mia couto',
+        isInCart: false,
       },
       {
         title: 'vidas secas',
         authorName: 'graciliano ramos',
+        isInCart: false,
       },
     ];
   }

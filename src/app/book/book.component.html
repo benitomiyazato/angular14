@@ -1,2 +1,3 @@
 <li>{{ book.title | titlecase}} de {{ book.authorName | titlecase}}</li>
-<button (click)="addToCard()">Add to Card</button>
+<button *ngIf="!book.isInCart" (click)="addToCart()">Add to Cart</button>
+<button *ngIf="book.isInCart"  (click)="removeFromCart()">Remove from Cart</button>

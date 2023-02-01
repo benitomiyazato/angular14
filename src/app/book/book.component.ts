@@ -1,3 +1,4 @@
+import { CartService } from './../services/cart.service';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BookInterface } from '../book-interface';
 
@@ -8,9 +9,15 @@ import { BookInterface } from '../book-interface';
 })
 export class BookComponent {
   @Input() book: BookInterface = {} as BookInterface;
-  @Output() bookEmitter = new EventEmitter<BookInterface>();
+  constructor(private cartService : CartService){}
 
-  addToCard = () => {
-    this.bookEmitter.emit(this.book);
+  addToCart() {
+    this.cartService.addToCart(this.book);
+    this.book.isInCart = true;
   };
+
+  removeFromCart(){
+    this.cartService.removeFromCart(this.book);
+    this.book.isInCart = false;
+  }
 }

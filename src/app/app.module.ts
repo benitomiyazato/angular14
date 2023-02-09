@@ -1,12 +1,12 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BooksModule } from './books/books.module';
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BooksModule],
+  imports: [BrowserModule, BooksModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

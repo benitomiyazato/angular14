@@ -10,7 +10,10 @@ export class CartComponent {
 
   constructor(private cartService : CartService) {}
 
+  ngOnInit(): void {}
+
   getCart(){
+    console.log(this.cartService.getCart());
     return this.cartService.getCart();
   }
 }

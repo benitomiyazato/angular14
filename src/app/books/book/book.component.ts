@@ -1,6 +1,6 @@
-import { CartService } from './../services/cart.service';
+import { CartService } from '../../services/cart.service';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { BookInterface } from '../book-interface';
+import { BookInterface } from '../../book-interface';
 
 @Component({
   selector: 'app-book',
@@ -12,7 +12,9 @@ export class BookComponent {
   constructor(private cartService : CartService){}
 
   addToCart() {
+    console.log("adding to cart " + this.book)
     this.cartService.addToCart(this.book);
+    console.log("cart = " + this.cartService.getCart());
     this.book.isInCart = true;
   };
 
